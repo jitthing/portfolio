@@ -1,32 +1,37 @@
 import { useRef } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ExperienceTimeLineComponent } from "./TimeLine";
 
-export const TextParallaxContentExample = () => {
+export const InfoCards = () => {
   return (
     <div className="bg-white">
-      <TextParallaxContent
-        imgUrl={
-          "https://burst.shopifycdn.com/photos/macbook-air-on-desk.jpg?width=1000&format=pjpg&exif=0&iptc=0"
-        }
+      <ImageCard
+        className="items-center justify-center"
+        imgUrl={"../images/jitt.jpeg"}
+        subHeading={"Work Experience"}
+        heading={"Where I have been!"}
+        TimeLine={<ExperienceTimeLineComponent className="justify-center" />}
+      >
+        <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
+      </ImageCard>
+      <ImageCard
+        imgUrl={"../images/jitt_and_mary.jpeg"}
         subHeading={"Subheading"}
         heading={"Heading"}
       >
-        <ExampleContent header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
-      </TextParallaxContent>
-      <TextParallaxContent>
-        <ExampleContent />
-      </TextParallaxContent>
-      <TextParallaxContent>
-        <ExampleContent />
-      </TextParallaxContent>
+        <Content />
+      </ImageCard>
+      <ImageCard imgUrl={"../images/floorball.jpeg"}>
+        <Content />
+      </ImageCard>
     </div>
   );
 };
 
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subHeading, heading, children }) => {
+const ImageCard = ({ imgUrl, subHeading, heading, TimeLine, children }) => {
   return (
     <div
       style={{
@@ -36,7 +41,11 @@ const TextParallaxContent = ({ imgUrl, subHeading, heading, children }) => {
     >
       <div className="relative h-[150vh]">
         <StickyImage imgUrl={imgUrl} />
-        <OverlayCopy subHeading={subHeading} heading={heading} />
+        <OverlayCopy
+          subHeading={subHeading}
+          heading={heading}
+          TimeLine={TimeLine}
+        />
       </div>
       {children}
     </div>
@@ -75,7 +84,7 @@ const StickyImage = ({ imgUrl }) => {
   );
 };
 
-const OverlayCopy = ({ subHeading, heading }) => {
+const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -91,17 +100,20 @@ const OverlayCopy = ({ subHeading, heading }) => {
         y,
         opacity,
       }}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+      className="absolute flex left-0 top-0 h-full w-full flex-col items-center justify-center text-white p-8"
     >
-      <p className="mb-2 text-center- text-xl md:mb-4 md:text-3xl">
+      <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subHeading}
       </p>
-      <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+      <p className="mb-6 text-center text-3xl font-bold md:text-6xl">
+        {heading}
+      </p>
+      {TimeLine}
     </motion.div>
   );
 };
 
-const ExampleContent = () => (
+const Content = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
       Additional content explaining the above card here

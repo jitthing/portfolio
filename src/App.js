@@ -1,10 +1,12 @@
 import MainSection from "./components/MainAbout";
-import { TextParallaxContentExample } from "./components/TextParallelContent";
+import { InfoCards } from "./components/TextParallelContent";
+import { TimeLineComponent } from "./components/TimeLine";
 function App() {
   return (
     <>
       <MainSection />
-      <TextParallaxContentExample />
+      <InfoCards />
+      {/* <TimeLineComponent /> */}
     </>
   );
 }

@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const Main = styled(motion.main)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   padding-top: 100px; // Adjust if necessary for your header
   padding-bottom: 50px;
