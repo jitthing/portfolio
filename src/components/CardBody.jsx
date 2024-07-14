@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExperienceTimeLineComponent } from "./TimeLine";
+import HoverDevCards from "./SkillCards";
 
 export const InfoCards = () => {
   return (
@@ -12,6 +13,7 @@ export const InfoCards = () => {
         imgUrl={"../images/jitt.jpeg"}
         subHeading={"Work Experience"}
         heading={"Where I have been!"}
+        height={150}
         TimeLine={<ExperienceTimeLineComponent className="justify-center" />}
       >
         <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
@@ -21,11 +23,18 @@ export const InfoCards = () => {
         imgUrl={"../images/jitt_and_mary.jpeg"}
         subHeading={"Subheading"}
         heading={"Heading"}
+        height={100}
       >
         <Content />
       </ImageCard>
-      {/* // idk something */}
-      <ImageCard imgUrl={"../images/floorball.jpeg"}>
+      {/* // Skills */}
+      <ImageCard
+        imgUrl={"../images/floorball.jpeg"}
+        subHeading={"Skills"}
+        heading={"Categories"}
+        height={100}
+        TimeLine={<HoverDevCards />}
+      >
         <Content />
       </ImageCard>
     </div>
@@ -34,7 +43,14 @@ export const InfoCards = () => {
 
 const IMG_PADDING = 12;
 
-const ImageCard = ({ imgUrl, subHeading, heading, TimeLine, children }) => {
+const ImageCard = ({
+  imgUrl,
+  subHeading,
+  heading,
+  TimeLine,
+  height,
+  children,
+}) => {
   return (
     <div
       style={{
@@ -42,7 +58,7 @@ const ImageCard = ({ imgUrl, subHeading, heading, TimeLine, children }) => {
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className="relative h-[150vh]">
+      <div className={`relative h-[${height}vh]`}>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           subHeading={subHeading}

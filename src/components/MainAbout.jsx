@@ -49,7 +49,7 @@ function MainSection() {
   const typingSpeed = 150,
     deletingSpeed = 50,
     delay = 1500;
-  const phrases = ["a student", "a developer", "an athlete"];
+  const phrases = ["a student", "a developer", "a designer"];
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -98,7 +98,7 @@ function MainSection() {
 
   return (
     <Main variants={containerVariants} initial="hidden" animate="visible">
-      <Heading>Hello, I'm Jitt 👋🏼</Heading>
+      <Heading>Hello 👋🏼, I'm Jitt</Heading>
       <Subheading>
         I'm {text}
         <Cursor id="cursor">|</Cursor>

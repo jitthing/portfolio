@@ -1,5 +1,5 @@
 import MainSection from "./components/MainAbout";
-import { InfoCards } from "./components/TextParallelContent";
+import { InfoCards } from "./components/CardBody";
 function App() {
   return (
     <>

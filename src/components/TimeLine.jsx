@@ -14,7 +14,11 @@ export const ExperienceTimeLineComponent = () => {
 
   return (
     <>
-      <VerticalTimeline contentStyle="relative" lineColor="white">
+      <VerticalTimeline
+        className="font-sans"
+        contentStyle="relative"
+        lineColor="white"
+      >
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === "work";
           return (
@@ -26,10 +30,10 @@ export const ExperienceTimeLineComponent = () => {
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
             >
-              <h3 className="vertical-timeline-element-title">
+              <h3 className="vertical-timeline-element-title text-xl">
                 {element.title}
               </h3>
-              <h5 className="vertical-timeline-element-subtitle">
+              <h5 className="vertical-timeline-element-subtitle text-lg">
                 {element.location}
               </h5>
               <p>{element.description}</p>
