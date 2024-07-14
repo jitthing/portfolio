@@ -6,7 +6,7 @@ const Main = styled(motion.main)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: right;
   padding-top: 100px; // Adjust if necessary for your header
   padding-bottom: 50px;
   height: 100vh;
@@ -49,6 +49,7 @@ function MainSection() {
   const typingSpeed = 150,
     deletingSpeed = 50,
     delay = 1500;
+  // eslint-disable-next-line
   const phrases = ["a student", "a developer", "a designer"];
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
@@ -85,6 +86,7 @@ function MainSection() {
     timeout = setTimeout(handleTyping, speed);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line
   }, [
     text,
     isDeleting,
@@ -97,13 +99,24 @@ function MainSection() {
   ]);
 
   return (
-    <Main variants={containerVariants} initial="hidden" animate="visible">
-      <Heading>Hello 👋🏼, I'm Jitt</Heading>
-      <Subheading>
-        I'm {text}
-        <Cursor id="cursor">|</Cursor>
-      </Subheading>
-    </Main>
+    <div className="h-full grid gap-16 grid-cols-2 lg:grid-cols-2">
+      <Main variants={containerVariants} initial="hidden" animate="visible">
+        <Heading>Hello 👋🏼, I'm Jitt</Heading>
+        <Subheading>
+          I'm {text}
+          <Cursor id="cursor">|</Cursor>
+        </Subheading>
+      </Main>
+      <div className="flex flex-col justify-center items-start h-full rounded-xl pt-2">
+        <img
+          width="200"
+          height="200"
+          className="rounded-full"
+          src="../images/profile.jpg"
+          alt="placeholder"
+        />
+      </div>
+    </div>
   );
 }
 

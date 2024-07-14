@@ -36,15 +36,6 @@ let timelineElements = [
     date: "Feb 2020 - Dec 2021",
     icon: "school",
   },
-  {
-    id: 5,
-    title: "Secondary School",
-    location: "Singapore",
-    description: "woohoo we love secondary school",
-    buttonText: "Cfsdsf",
-    date: "Jan 2016 - Dec 2019",
-    icon: "school",
-  },
 ];
 
 export default timelineElements;

@@ -1,25 +1,36 @@
 import React from "react";
-import styled from "styled-components";
-import { FiUsers } from "react-icons/fi";
 import { VscFileCode } from "react-icons/vsc";
+import { AiOutlineApi } from "react-icons/ai";
 import { BsDatabase } from "react-icons/bs";
+import { IoLanguageOutline } from "react-icons/io5";
 
 const HoverDevCards = () => {
   return (
-    <div className="p-4 w-full h-3/6 items-center">
-      <div className="h-full grid gap-4 grid-cols-2 lg:grid-cols-3">
+    <div className="p-4 w-full h-1/3 items-center">
+      <div className="h-full grid gap-4 grid-cols-2 lg:grid-cols-4">
         <Card
           title="Frontend"
-          subtitle="Manage profile"
+          subtitle="Frameworks"
           href="#"
           Icon={VscFileCode}
         />
-        <Card title="Backend" subtitle="Manage team" href="#" Icon={FiUsers} />
+        <Card
+          title="Backend"
+          subtitle="Frameworks"
+          href="#"
+          Icon={AiOutlineApi}
+        />
         <Card
           title="Database"
-          subtitle="Manage cards"
+          subtitle="Something"
           href="#"
           Icon={BsDatabase}
+        />
+        <Card
+          title="Languages"
+          subtitle="Languages"
+          href="#"
+          Icon={IoLanguageOutline}
         />
       </div>
     </div>

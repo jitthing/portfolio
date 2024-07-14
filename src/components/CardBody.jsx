@@ -13,8 +13,8 @@ export const InfoCards = () => {
         imgUrl={"../images/jitt.jpeg"}
         subHeading={"Work Experience"}
         heading={"Where I have been!"}
-        height={150}
-        TimeLine={<ExperienceTimeLineComponent className="justify-center" />}
+        height={"150"}
+        TimeLine={<ExperienceTimeLineComponent />}
       >
         <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
       </ImageCard>
@@ -23,7 +23,7 @@ export const InfoCards = () => {
         imgUrl={"../images/jitt_and_mary.jpeg"}
         subHeading={"Subheading"}
         heading={"Heading"}
-        height={100}
+        height={"150"}
       >
         <Content />
       </ImageCard>
@@ -32,7 +32,7 @@ export const InfoCards = () => {
         imgUrl={"../images/floorball.jpeg"}
         subHeading={"Skills"}
         heading={"Categories"}
-        height={100}
+        height={"150"}
         TimeLine={<HoverDevCards />}
       >
         <Content />
@@ -64,6 +64,7 @@ const ImageCard = ({
           subHeading={subHeading}
           heading={heading}
           TimeLine={TimeLine}
+          height={height}
         />
       </div>
       {children}
@@ -103,15 +104,18 @@ const StickyImage = ({ imgUrl }) => {
   );
 };
 
-const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
+const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+  let pixels = 250 * (height / 150);
+
+  const y = useTransform(scrollYProgress, [0, 1], [pixels, -pixels]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+  //  TO REMEMBER: CHANGE THE INSET ON MOTION.DIV IN ACCORDANCE TO HEIGHT OF OVERLAY
   return (
     <motion.div
       ref={targetRef}
@@ -119,7 +123,7 @@ const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
         y,
         opacity,
       }}
-      className="absolute flex left-0 top-0 h-full w-full flex-col items-center justify-center text-white p-8"
+      className={`absolute left-0 inset-y-28 flex h-screen w-full flex-col items-center justify-center text-white`}
     >
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subHeading}
