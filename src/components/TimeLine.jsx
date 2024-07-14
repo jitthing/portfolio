@@ -14,7 +14,7 @@ export const ExperienceTimeLineComponent = () => {
 
   return (
     <>
-      <VerticalTimeline contentStyle="relative">
+      <VerticalTimeline contentStyle="relative" lineColor="white">
         {timelineElements.map((element) => {
           let isWorkIcon = element.icon === "work";
           return (
@@ -22,6 +22,7 @@ export const ExperienceTimeLineComponent = () => {
               key={element.id}
               className="text-black"
               date={element.date}
+              dateClassName="text-white"
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
             >

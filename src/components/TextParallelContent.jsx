@@ -6,6 +6,7 @@ import { ExperienceTimeLineComponent } from "./TimeLine";
 export const InfoCards = () => {
   return (
     <div className="bg-white">
+      {/* // Work Experience */}
       <ImageCard
         className="items-center justify-center"
         imgUrl={"../images/jitt.jpeg"}
@@ -15,6 +16,7 @@ export const InfoCards = () => {
       >
         <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
       </ImageCard>
+      {/* // Projects */}
       <ImageCard
         imgUrl={"../images/jitt_and_mary.jpeg"}
         subHeading={"Subheading"}
@@ -22,6 +24,7 @@ export const InfoCards = () => {
       >
         <Content />
       </ImageCard>
+      {/* // idk something */}
       <ImageCard imgUrl={"../images/floorball.jpeg"}>
         <Content />
       </ImageCard>
