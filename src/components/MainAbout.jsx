@@ -107,7 +107,12 @@ function MainSection() {
           <Cursor id="cursor">|</Cursor>
         </Subheading>
       </Main>
-      <div className="flex flex-col justify-center items-start h-full rounded-xl pt-2">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col justify-center items-start h-full rounded-xl pt-2"
+      >
         <img
           width="200"
           height="200"
@@ -115,7 +120,7 @@ function MainSection() {
           src="../images/profile.jpg"
           alt="placeholder"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

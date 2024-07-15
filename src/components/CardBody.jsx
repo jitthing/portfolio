@@ -2,7 +2,10 @@ import { useRef } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExperienceTimeLineComponent } from "./TimeLine";
+import { Projects } from "./Projects";
 import HoverDevCards from "./SkillCards";
+
+// might need to split each card into its own component in order to change the relative height and shit
 
 export const InfoCards = () => {
   return (
@@ -24,6 +27,7 @@ export const InfoCards = () => {
         subHeading={"Subheading"}
         heading={"Heading"}
         height={"150"}
+        TimeLine={<Projects />}
       >
         <Content />
       </ImageCard>
@@ -58,7 +62,7 @@ const ImageCard = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[${height}vh]`}>
+      <div className={`relative h-[150vh]`}>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           subHeading={subHeading}
