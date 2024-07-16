@@ -6,12 +6,16 @@ import { Projects } from "./Projects";
 import HoverDevCards from "./SkillCards";
 
 // might need to split each card into its own component in order to change the relative height and shit
+/* Structure of each component would look like
+  < <ComponentName>ImageCard />
+  within this is StickyImage + ComponentOverlay
+  */
 
 export const InfoCards = () => {
   return (
     <div className="bg-white">
       {/* // Work Experience */}
-      <ImageCard
+      <ExperienceImageCard
         className="items-center justify-center"
         imgUrl={"../images/jitt.jpeg"}
         subHeading={"Work Experience"}
@@ -20,9 +24,9 @@ export const InfoCards = () => {
         TimeLine={<ExperienceTimeLineComponent />}
       >
         <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
-      </ImageCard>
+      </ExperienceImageCard>
       {/* // Projects */}
-      <ImageCard
+      <ProjectImageCard
         imgUrl={"../images/jitt_and_mary.jpeg"}
         subHeading={"Subheading"}
         heading={"Heading"}
@@ -30,24 +34,24 @@ export const InfoCards = () => {
         TimeLine={<Projects />}
       >
         <Content />
-      </ImageCard>
+      </ProjectImageCard>
       {/* // Skills */}
-      <ImageCard
+      <SkillImageCard
         imgUrl={"../images/floorball.jpeg"}
-        subHeading={"Skills"}
-        heading={"Categories"}
+        subHeading={"My Skills"}
+        heading={"Coding Languages"}
         height={"150"}
         TimeLine={<HoverDevCards />}
       >
         <Content />
-      </ImageCard>
+      </SkillImageCard>
     </div>
   );
 };
 
 const IMG_PADDING = 12;
 
-const ImageCard = ({
+const ExperienceImageCard = ({
   imgUrl,
   subHeading,
   heading,
@@ -55,6 +59,7 @@ const ImageCard = ({
   height,
   children,
 }) => {
+  // might need to move children out of the div and into the component so achieve the more than 150vh for the card
   return (
     <div
       style={{
@@ -62,7 +67,67 @@ const ImageCard = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[150vh]`}>
+      <div className={`relative h-[200vh]`}>
+        <StickyImage imgUrl={imgUrl} />
+        <OverlayCopy
+          subHeading={subHeading}
+          heading={heading}
+          TimeLine={TimeLine}
+          height={height}
+        />
+      </div>
+      {children}
+    </div>
+  );
+};
+
+const ProjectImageCard = ({
+  imgUrl,
+  subHeading,
+  heading,
+  TimeLine,
+  height,
+  children,
+}) => {
+  // might need to move children out of the div and into the component so achieve the more than 150vh for the card
+  return (
+    <div
+      style={{
+        paddingLeft: IMG_PADDING,
+        paddingRight: IMG_PADDING,
+      }}
+    >
+      <div className={`relative h-[350vh]`}>
+        <StickyImage imgUrl={imgUrl} />
+        <OverlayCopy
+          subHeading={subHeading}
+          heading={heading}
+          TimeLine={TimeLine}
+          height={height}
+        />
+      </div>
+      {children}
+    </div>
+  );
+};
+
+const SkillImageCard = ({
+  imgUrl,
+  subHeading,
+  heading,
+  TimeLine,
+  height,
+  children,
+}) => {
+  // might need to move children out of the div and into the component so achieve the more than 150vh for the card
+  return (
+    <div
+      style={{
+        paddingLeft: IMG_PADDING,
+        paddingRight: IMG_PADDING,
+      }}
+    >
+      <div className={`relative h-[125vh]`}>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           subHeading={subHeading}
@@ -82,6 +147,8 @@ const StickyImage = ({ imgUrl }) => {
     target: targetRef,
     offset: ["end end", "end start"],
   });
+
+  console.log(scrollYProgress);
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -115,9 +182,7 @@ const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
     offset: ["start end", "end start"],
   });
 
-  let pixels = 250 * (height / 150);
-
-  const y = useTransform(scrollYProgress, [0, 1], [pixels, -pixels]);
+  const y = useTransform(scrollYProgress, [0, 1], [500, -500]);
   const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
   //  TO REMEMBER: CHANGE THE INSET ON MOTION.DIV IN ACCORDANCE TO HEIGHT OF OVERLAY
   return (
@@ -127,7 +192,7 @@ const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
         y,
         opacity,
       }}
-      className={`absolute left-0 inset-y-28 flex h-screen w-full flex-col items-center justify-center text-white`}
+      className={`absolute left-0 inset-y-28 flex w-full flex-col items-center justify-center text-white`}
     >
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subHeading}

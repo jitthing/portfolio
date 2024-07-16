@@ -4,10 +4,10 @@ let timelineElements = [
     title: "Singapore Management University",
     location: "Singapore",
     description:
-      "Freshman at SMU School of Information Systems - School of Computing and Information Systems",
+      "Sophmore at SMU School of Information Systems - Digitilisation and Cloud Solutioning (DCS)",
     buttonText: "Some button",
     date: "August 2023 - present",
-    icon: "school",
+    icon: "smu",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ let timelineElements = [
     description: "-- Insert description here --",
     buttonText: "some button",
     date: "Jan 2023 - July 2023",
-    icon: "work",
+    icon: "accenture",
   },
   {
     id: 3,

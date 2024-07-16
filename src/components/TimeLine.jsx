@@ -5,12 +5,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import timelineElements from "../timelineElement";
 
-import { ReactComponent as WorkIcon } from "../work.svg";
-import { ReactComponent as SchoolIcon } from "../school.svg";
-
 export const ExperienceTimeLineComponent = () => {
-  let workIconStyles = { background: "#06D6A0" };
-  let schoolIconStyles = { background: "#f9c74f" };
+  let IconStyles = {
+    background: "#d3d3d3",
+    display: "flex",
+    alignItems: "center",
+  };
 
   return (
     <>
@@ -20,15 +20,19 @@ export const ExperienceTimeLineComponent = () => {
         lineColor="white"
       >
         {timelineElements.map((element) => {
-          let isWorkIcon = element.icon === "work";
           return (
             <VerticalTimelineElement
               key={element.id}
               className="text-black"
               date={element.date}
               dateClassName="text-white"
-              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+              iconStyle={IconStyles}
+              icon={
+                <ComponentPicture
+                  className="flex flex-row justify-center"
+                  imgUrl={`../../images/${element.icon}.png`}
+                />
+              }
             >
               <h3 className="vertical-timeline-element-title text-xl">
                 {element.title}
@@ -43,4 +47,8 @@ export const ExperienceTimeLineComponent = () => {
       </VerticalTimeline>
     </>
   );
+};
+
+const ComponentPicture = ({ imgUrl }) => {
+  return <img src={imgUrl} alt="" />;
 };
