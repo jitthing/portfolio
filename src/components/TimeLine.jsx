@@ -7,7 +7,8 @@ import timelineElements from "../timelineElement";
 
 export const ExperienceTimeLineComponent = () => {
   let IconStyles = {
-    background: "#d3d3d3",
+    background: "#FFFFFF",
+    // border: "2px solid",
     display: "flex",
     alignItems: "center",
   };
@@ -50,5 +51,5 @@ export const ExperienceTimeLineComponent = () => {
 };
 
 const ComponentPicture = ({ imgUrl }) => {
-  return <img src={imgUrl} alt="" />;
+  return <img className="ps-1" height={57} width={57} src={imgUrl} alt="" />;
 };
