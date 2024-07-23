@@ -23,7 +23,7 @@ export const InfoCards = () => {
         height={"150"}
         TimeLine={<ExperienceTimeLineComponent />}
       >
-        <Content header={"hgosfdhgf"} subHeading={"hgskjhjkfsd"} />
+        <ExperienceContent />
       </ExperienceImageCard>
       {/* // Projects */}
       <ProjectImageCard
@@ -33,7 +33,7 @@ export const InfoCards = () => {
         height={"150"}
         TimeLine={<Projects />}
       >
-        <Content />
+        <ProjectContent />
       </ProjectImageCard>
       {/* // Skills */}
       <SkillImageCard
@@ -42,9 +42,7 @@ export const InfoCards = () => {
         heading={"Coding Languages"}
         height={"150"}
         TimeLine={<HoverDevCards />}
-      >
-        <Content />
-      </SkillImageCard>
+      />
     </div>
   );
 };
@@ -97,7 +95,7 @@ const ProjectImageCard = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[350vh]`}>
+      <div className={`relative h-[250vh]`}>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           subHeading={subHeading}
@@ -183,7 +181,8 @@ const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [500, -500]);
-  const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+  // need to fix this opacity relative to the whole height
+  const opacity = useTransform(scrollYProgress, [0.1, 0.5, 0.9], [0, 1, 0]);
   //  TO REMEMBER: CHANGE THE INSET ON MOTION.DIV IN ACCORDANCE TO HEIGHT OF OVERLAY
   return (
     <motion.div
@@ -205,24 +204,36 @@ const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
   );
 };
 
-const Content = () => (
+const ExperienceContent = () => (
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">Testing</h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">Testing 2</p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">Testing 3</p>
+      <a
+        href={`${process.env.PUBLIC_URL}/resume.pdf`}
+        download="Jitt Hing Resume.pdf"
+      >
+        <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+          My Resume <FiArrowUpRight className="inline" />
+        </button>
+      </a>
+    </div>
+  </div>
+);
+
+const ProjectContent = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      Additional content explaining the above card here
+      Brief snapshot of the projects I have done so far!
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">test</p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
+        To view all my projects, click below to visit my Github page!
       </p>
       <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
+        Github <FiArrowUpRight className="inline" />
       </button>
     </div>
   </div>

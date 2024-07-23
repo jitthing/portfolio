@@ -16,8 +16,8 @@ const containerVariants = {
 
 const HoverDevCards = () => {
   return (
-    <div className="p-4 w-full h-2/3 items-center xl:h-1/3">
-      <div className="h-full grid gap-4 grid-cols-2 lg:grid-cols-4">
+    <div className="p-4 w-full h-1/2 items-center md:h-1/3">
+      <div className="h-full grid gap-4 grid-cols-2 md:grid-cols-4">
         <Card
           title="Frontend"
           subtitle="Hover Me!"
@@ -79,9 +79,9 @@ const Card = ({ title, subtitle, Icon, skills }) => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative z-50 pt-4 w-full"
+          className="relative z-50 pt-4 w-full h-fit"
         >
-          <div className="flex flex-row items-center px-2 w-full">
+          <div className="flex flex-row flex-wrap items-center px-2 w-full md:h-fit">
             {skills.map((skill, index) => {
               return (
                 <ImageComponent
@@ -104,7 +104,7 @@ const Card = ({ title, subtitle, Icon, skills }) => {
 const ImageComponent = ({ imgUrl, name }) => {
   return (
     <div className="grid grid-rows-2 gap-2 justify-center px-2">
-      <img width={80} height={80} src={imgUrl} alt={name} />
+      <img className="w-10 h-10 md:w-16 md:h-16" src={imgUrl} alt={name} />
       <p className="text-center">{name.split(" ").join(".")}</p>
     </div>
   );

@@ -11,6 +11,15 @@ let timelineElements = [
   },
   {
     id: 2,
+    title: "Data Analyst Intern",
+    location: "Automation SG, Singapore",
+    description: "-- Insert description here --",
+    buttonText: "Company Website",
+    date: "Nov 2023 - Dec 2023",
+    icon: "automationsg",
+  },
+  {
+    id: 3,
     title: "Risk Analyst",
     location: "Accenture, Singapore",
     description: "-- Insert description here --",
@@ -19,22 +28,13 @@ let timelineElements = [
     icon: "accenture",
   },
   {
-    id: 3,
+    id: 4,
     title: "National Service",
-    location: "Singapore",
-    description: "blah blah blah",
+    location: "Mindef, Singapore",
+    description: "-- Insert description here --",
     buttonText: "Company Website",
     date: "Jan 2021 - Nov 2022",
-    icon: "work",
-  },
-  {
-    id: 4,
-    title: "Nanyang Junior College",
-    location: "Singapore",
-    description: "woohoo we love jc",
-    buttonText: "Course Certificate",
-    date: "Feb 2020 - Dec 2021",
-    icon: "school",
+    icon: "mindef",
   },
 ];
 

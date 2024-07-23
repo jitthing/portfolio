@@ -9,7 +9,13 @@ const Main = styled(motion.main)`
   text-align: right;
   padding-top: 100px; // Adjust if necessary for your header
   padding-bottom: 50px;
-  height: 100vh;
+`;
+
+const NavigationButtonWrapper = styled(motion.div)`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center; /* centers items horizontally */
+  align-items: center; /* centers items vertically */
 `;
 
 const Heading = styled.h1`
@@ -99,30 +105,49 @@ function MainSection() {
   ]);
 
   return (
-    <div className="h-full grid gap-16 grid-cols-2 lg:grid-cols-2">
-      <Main variants={containerVariants} initial="hidden" animate="visible">
-        <Heading>Hello 👋🏼, I'm Jitt</Heading>
-        <Subheading>
-          I'm {text}
-          <Cursor id="cursor">|</Cursor>
-        </Subheading>
-      </Main>
-      <motion.div
+    <div className="flex flex-col h-[100vh]">
+      <div className="h-5/6 grid gap-16 grid-cols-2 lg:grid-cols-2">
+        <Main variants={containerVariants} initial="hidden" animate="visible">
+          <Heading>Hello 👋🏼, I'm Jitt</Heading>
+          <Subheading>
+            I'm {text}
+            <Cursor id="cursor">|</Cursor>
+          </Subheading>
+        </Main>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col justify-center items-start h-full rounded-xl pt-2"
+        >
+          <img
+            width="200"
+            height="200"
+            className="rounded-full"
+            src="../images/profile.jpg"
+            alt="placeholder"
+          />
+        </motion.div>
+      </div>
+      <NavigationButtonWrapper
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center items-start h-full rounded-xl pt-2"
       >
-        <img
-          width="200"
-          height="200"
-          className="rounded-full"
-          src="../images/profile.jpg"
-          alt="placeholder"
-        />
-      </motion.div>
+        <DottedButton name={"Experience"} />
+        <DottedButton name={"Projects"} />
+        <DottedButton name={"Skills"} />
+      </NavigationButtonWrapper>
     </div>
   );
 }
+
+const DottedButton = ({ name }) => {
+  return (
+    <button className="w-1/2 rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
+      {name}
+    </button>
+  );
+};
 
 export default MainSection;
