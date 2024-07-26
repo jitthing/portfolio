@@ -5,6 +5,8 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import timelineElements from "../timelineElement";
 
+// import { SiAccenture } from "react-icons/si";
+
 export const ExperienceTimeLineComponent = () => {
   let IconStyles = {
     background: "#FFFFFF",

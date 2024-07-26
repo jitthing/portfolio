@@ -1,12 +1,16 @@
 import MainSection from "./components/MainAbout";
-import { InfoCards } from "./components/CardBody";
+import { ExperienceInfoCards } from "./components/ExperienceCardBody";
+import { ProjectInfoCards } from "./components/ProjectCardBody";
+import { SkillInfoCards } from "./components/SkillsCardBody";
 // import { Projects } from "./components/Projects";
 function App() {
   return (
     <>
       <MainSection />
-      <InfoCards />
-      {/* <Projects /> */}
+      <ExperienceInfoCards />
+      <ProjectInfoCards />
+      <SkillInfoCards />
+      {/* Add a contact component with all the links (LinkedIn, Github, Email) */}
     </>
   );
 }

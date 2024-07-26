@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Main = styled(motion.main)`
   display: flex;
@@ -134,9 +135,15 @@ function MainSection() {
         initial="hidden"
         animate="visible"
       >
-        <DottedButton name={"Experience"} />
-        <DottedButton name={"Projects"} />
-        <DottedButton name={"Skills"} />
+        <Link to="#experience" smooth>
+          <DottedButton name={"Experience"} />
+        </Link>
+        <Link to="#projects" smooth>
+          <DottedButton name={"Projects"} />
+        </Link>
+        <Link to="#skills" smooth>
+          <DottedButton name={"Skills"} />
+        </Link>
       </NavigationButtonWrapper>
     </div>
   );
