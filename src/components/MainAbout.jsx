@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
+import { DottedButton } from "./DottedButton";
 
 const Main = styled(motion.main)`
   display: flex;
@@ -13,10 +14,11 @@ const Main = styled(motion.main)`
 `;
 
 const NavigationButtonWrapper = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center; /* centers items horizontally */
-  align-items: center; /* centers items vertically */
+  display: flex;
+  margin: 0 auto;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const Heading = styled.h1`
@@ -57,7 +59,7 @@ function MainSection() {
     deletingSpeed = 50,
     delay = 1500;
   // eslint-disable-next-line
-  const phrases = ["a student", "a developer", "a designer"];
+  const phrases = ["student", "developer", "designer"];
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -111,7 +113,7 @@ function MainSection() {
         <Main variants={containerVariants} initial="hidden" animate="visible">
           <Heading>Hello 👋🏼, I'm Jitt</Heading>
           <Subheading>
-            I'm {text}
+            I'm a {text}
             <Cursor id="cursor">|</Cursor>
           </Subheading>
         </Main>
@@ -148,13 +150,5 @@ function MainSection() {
     </div>
   );
 }
-
-const DottedButton = ({ name }) => {
-  return (
-    <button className="w-1/2 justify-self-center rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
-      {name}
-    </button>
-  );
-};
 
 export default MainSection;

@@ -1,0 +1,42 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-content {
+  margin-top: 20px;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  color: #666;
+  margin-top: 10px;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}

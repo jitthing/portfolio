@@ -1,0 +1,10 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.project-card {
+  scroll-snap-align: start;
+}

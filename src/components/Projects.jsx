@@ -1,38 +1,35 @@
 import projectElement from "../projectElement";
+import "./Projects.css";
+import "./ProjectCard.css";
+import { DottedButton } from "./DottedButton";
+
+const ProjectCard = ({ title, description, image, link }) => {
+  return (
+    <div className="project-card">
+      <img src={image} alt={title} className="project-image" />
+      <div className="project-content">
+        <h2 className="project-title">{title}</h2>
+        <p className="project-description">{description}</p>
+        <a href={link} target="_blank" rel="noreferrer">
+          <DottedButton name="View Project" />
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export const Projects = () => {
   return (
-    <>
-      {/* // Projects 
-        Each project to have height of h-screen
-        Numbered in ascending order and to have a model/picture of the project
-        along with the description
-        Example: 
-
-        1.           Picture span
-        Description  Picture span
-        */}
-      {projectElement.map((project) => {
-        return (
-          <div
-            key={project.id}
-            className="h-screen w-3/4 grid grid-cols-2 items-center justify-center"
-          >
-            <div id="title_description" className="flex flex-col py-4 w-full">
-              <div>
-                {project.id}. {project.title}
-              </div>
-              <div className="w-1/2 pt-2">{project.description}</div>
-            </div>
-            <img
-              id="pic"
-              className="w-full"
-              src={`../../images/${project.imgUrl}.jpg`}
-              alt=""
-            />
-          </div>
-        );
-      })}
-    </>
+    <div className="projects-container">
+      {projectElement.map((project, index) => (
+        <ProjectCard
+          key={index}
+          title={project.title}
+          description={project.description}
+          image={`../../images/${project.imgUrl}.gif`}
+          link={project.link}
+        />
+      ))}
+    </div>
   );
 };
