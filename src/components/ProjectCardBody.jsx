@@ -1,6 +1,7 @@
 import { StickyImage } from "./StickyImage";
 import { OverlayCopy } from "./OverlayCopy";
 import { Projects } from "./Projects";
+import { DottedButton } from "./DottedButton";
 import { BsGithub } from "react-icons/bs";
 
 const IMG_PADDING = 12;
@@ -63,9 +64,7 @@ const ProjectContent = () => (
         To view all my projects, click below to visit my Github page!
       </p>
       <a href="https://github.com/jitthing" target="_blank" rel="noreferrer">
-        <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-          Github <BsGithub className="inline" />
-        </button>
+        <DottedButton name="Github" Icon={BsGithub} />
       </a>
     </div>
   </div>

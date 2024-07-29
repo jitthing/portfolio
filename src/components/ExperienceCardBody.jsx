@@ -1,5 +1,6 @@
 import { FiArrowUpRight } from "react-icons/fi";
 import { ExperienceTimeLineComponent } from "./TimeLine";
+import { DottedButton } from "./DottedButton";
 import { OverlayCopy } from "./OverlayCopy";
 import { StickyImage } from "./StickyImage";
 
@@ -74,9 +75,10 @@ const ExperienceContent = () => (
         href={`${process.env.PUBLIC_URL}/resume.pdf`}
         download="Jitt Hing Resume.pdf"
       >
-        <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+        {/* <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
           My Resume <FiArrowUpRight className="inline" />
-        </button>
+        </button> */}
+        <DottedButton name="My Resume" Icon={FiArrowUpRight} />
       </a>
     </div>
   </div>

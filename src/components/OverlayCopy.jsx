@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-export const OverlayCopy = ({ subHeading, heading, TimeLine, height }) => {
+export const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
