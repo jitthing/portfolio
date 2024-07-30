@@ -43,7 +43,13 @@ export const ExperienceTimeLineComponent = () => {
               <h5 className="vertical-timeline-element-subtitle text-lg">
                 {element.location}
               </h5>
-              <p>{element.description}</p>
+              <p>
+                <ul>
+                  {element.description.map((desc, index) => {
+                    return <li key={index}>{desc}</li>;
+                  })}
+                </ul>
+              </p>
             </VerticalTimelineElement>
           );
         })}

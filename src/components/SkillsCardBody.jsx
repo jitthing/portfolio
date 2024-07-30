@@ -13,7 +13,7 @@ export const SkillInfoCards = () => {
         subHeading={"My Skills"}
         heading={"Coding Languages"}
         height={"150"}
-        TimeLine={<HoverDevCards />}
+        Component={<HoverDevCards />}
       />
     </div>
   );
@@ -23,7 +23,7 @@ const SkillImageCard = ({
   imgUrl,
   subHeading,
   heading,
-  TimeLine,
+  Component,
   height,
   children,
 }) => {
@@ -40,7 +40,7 @@ const SkillImageCard = ({
         <OverlayCopy
           subHeading={subHeading}
           heading={heading}
-          TimeLine={TimeLine}
+          Component={Component}
           height={height}
         />
       </div>

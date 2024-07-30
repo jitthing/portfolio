@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
-export const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
+export const OverlayCopy = ({ subHeading, heading, Component }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -24,10 +24,10 @@ export const OverlayCopy = ({ subHeading, heading, TimeLine }) => {
       <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
         {subHeading}
       </p>
-      <p className="mb-6 text-center text-3xl font-bold md:text-6xl">
+      <p className="mb-7 text-center text-3xl font-bold md:text-6xl">
         {heading}
       </p>
-      {TimeLine}
+      {Component}
     </motion.div>
   );
 };

@@ -1,4 +1,4 @@
-import { FiArrowUpRight } from "react-icons/fi";
+import { BsLinkedin } from "react-icons/bs";
 import { ExperienceTimeLineComponent } from "./TimeLine";
 import { DottedButton } from "./DottedButton";
 import { OverlayCopy } from "./OverlayCopy";
@@ -21,9 +21,9 @@ export const ExperienceInfoCards = () => {
         className="items-center justify-center"
         imgUrl={"../images/jitt.jpeg"}
         subHeading={"Work Experience"}
-        heading={"Where I have been!"}
+        heading={"Where I Have Been!"}
         height={"150"}
-        TimeLine={<ExperienceTimeLineComponent />}
+        Component={<ExperienceTimeLineComponent />}
       >
         <ExperienceContent />
       </ExperienceImageCard>
@@ -37,7 +37,7 @@ const ExperienceImageCard = ({
   imgUrl,
   subHeading,
   heading,
-  TimeLine,
+  Component,
   height,
   children,
 }) => {
@@ -54,7 +54,7 @@ const ExperienceImageCard = ({
         <OverlayCopy
           subHeading={subHeading}
           heading={heading}
-          TimeLine={TimeLine}
+          Component={Component}
           height={height}
         />
       </div>
@@ -78,7 +78,7 @@ const ExperienceContent = () => (
         {/* <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
           My Resume <FiArrowUpRight className="inline" />
         </button> */}
-        <DottedButton name="My Resume" Icon={FiArrowUpRight} />
+        <DottedButton name="My LinkedIn" Icon={BsLinkedin} />
       </a>
     </div>
   </div>

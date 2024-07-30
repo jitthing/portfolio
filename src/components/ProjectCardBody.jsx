@@ -12,10 +12,10 @@ export const ProjectInfoCards = () => {
       <ProjectImageCard
         id="#projects"
         imgUrl={"../images/jitt_and_mary.jpeg"}
-        subHeading={"Subheading"}
-        heading={"Heading"}
+        subHeading={"My Projects"}
+        heading={"Some Things That I Have Done!"}
         height={"150"}
-        TimeLine={<Projects />}
+        Component={<Projects />}
       >
         <ProjectContent />
       </ProjectImageCard>
@@ -27,7 +27,7 @@ const ProjectImageCard = ({
   imgUrl,
   subHeading,
   heading,
-  TimeLine,
+  Component,
   height,
   children,
 }) => {
@@ -44,7 +44,7 @@ const ProjectImageCard = ({
         <OverlayCopy
           subHeading={subHeading}
           heading={heading}
-          TimeLine={TimeLine}
+          Component={Component}
           height={height}
         />
       </div>
