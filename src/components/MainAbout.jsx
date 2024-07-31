@@ -59,7 +59,7 @@ function MainSection() {
     deletingSpeed = 50,
     delay = 1500;
   // eslint-disable-next-line
-  const phrases = ["student", "developer", "designer"];
+  const phrases = ["student", "developer", "learner"];
   const [text, setText] = useState("");
   const [count, setCount] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

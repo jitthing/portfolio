@@ -15,7 +15,7 @@ let projectElement = [
       "a personal portfolio website to better visualise my projects and experiences while making it fun and interactive for the user",
     imgUrl: "personal",
     projectLink: "https://github.com/jitthing/my-web",
-    skills: ["React", "Node.js", "Express", "MongoDB", "Three.js"],
+    skills: ["React", "Node.js", "Framer Motion"],
   },
 ];
 

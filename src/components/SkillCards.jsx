@@ -64,10 +64,10 @@ const Card = ({ title, subtitle, Icon, skills }) => {
       onMouseLeave={handleMouseLeave}
       className="w-full h-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-300 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-r from-rose-700 to-rose-500 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
 
-      <Icon className="absolute z-10 -top-12 -right-12 text-9xl text-slate-200 group-hover:text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
-      <Icon className="mb-2 text-2xl text-blue-600 group-hover:text-white transition-colors relative z-10 duration-300" />
+      <Icon className="absolute z-10 -top-12 -right-12 text-9xl text-slate-200 group-hover:text-rose-400 group-hover:rotate-12 transition-transform duration-300" />
+      <Icon className="mb-2 text-2xl text-rose-400 group-hover:text-white transition-colors relative z-10 duration-300" />
       <h3 className="font-medium text-xl text-slate-950 group-hover:text-white relative z-10 duration-300">
         {title}
       </h3>

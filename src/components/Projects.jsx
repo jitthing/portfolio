@@ -14,7 +14,7 @@ const ProjectCard = ({ title, description, image, link, skills }) => {
           {skills.map((skill, index) => (
             <span
               key={index}
-              className="bg-blue-200 text-gray-800 text-base font-medium px-2 py-1 rounded mr-2 mb-2"
+              className="bg-blue-200 text-gray-800 text-base font-medium px-2 py-1 rounded-xl mr-2 mb-2"
             >
               {skill}
             </span>

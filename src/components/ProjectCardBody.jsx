@@ -11,7 +11,7 @@ export const ProjectInfoCards = () => {
     <div className="bg-white" id="projects">
       <ProjectImageCard
         id="#projects"
-        imgUrl={"../images/jitt_and_mary.jpeg"}
+        imgUrl={"../images/sunset.jpeg"}
         subHeading={"My Projects"}
         heading={"Some Things That I Have Done!"}
         height={"150"}

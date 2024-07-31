@@ -9,7 +9,7 @@ export const SkillInfoCards = () => {
     <div className="bg-white" id="skills">
       <SkillImageCard
         id="#skills"
-        imgUrl={"../images/floorball.jpeg"}
+        imgUrl={"../images/coldplay.jpeg"}
         subHeading={"My Skills"}
         heading={"Coding Languages"}
         height={"150"}

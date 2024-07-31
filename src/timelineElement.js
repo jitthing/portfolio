@@ -4,8 +4,8 @@ let timelineElements = [
     title: "Singapore Management University",
     location: "Singapore",
     description: [
-      "Sophmore at SMU School of Information Systems",
-      "Majoring in Digitilisation and Cloud Solutioning (DCS)",
+      "~ Sophmore at SMU School of Information Systems",
+      "~ Majoring in Digitilisation and Cloud Solutioning (DCS)",
     ],
     date: "August 2023 - present",
     icon: "smu",
@@ -15,8 +15,8 @@ let timelineElements = [
     title: "Data Analyst Intern",
     location: "AutomationSG, Singapore",
     description: [
-      "Worked on automating data validation for client data",
-      "Used Python to run automation scripts and extract, analyze data",
+      "~ Worked on automating data validation for client data",
+      "~ Used Python to run automation scripts and extract, analyze data",
     ],
     date: "May 2024 - Jul 2024",
     icon: "automationsg",
@@ -26,9 +26,9 @@ let timelineElements = [
     title: "Compliance and Security Analyst",
     location: "Accenture, Singapore",
     description: [
-      "Worked as part of the Compliance team on a MINDEF project",
-      "Involed in the development of the OneNS web service as well as a mobile app",
-      "Gained experience using AWS Console, more specifically Cloudwatch and Cloudtrail",
+      "~ Worked as part of the Compliance team on a MINDEF project",
+      "~ Involed in the development of the OneNS web service as well as a mobile app",
+      "~ Gained experience using AWS Console, more specifically Cloudwatch and Cloudtrail",
     ],
 
     date: "Jan 2023 - July 2023",
