@@ -37,10 +37,10 @@ export const ExperienceTimeLineComponent = () => {
                 />
               }
             >
-              <h3 className="vertical-timeline-element-title text-xl">
+              <h3 className="vertical-timeline-element-title text-xl font-bold">
                 {element.title}
               </h3>
-              <h5 className="vertical-timeline-element-subtitle text-lg">
+              <h5 className="vertical-timeline-element-subtitle text-lg font-semibold">
                 {element.location}
               </h5>
               <p>

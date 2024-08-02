@@ -1,8 +1,8 @@
 let timelineElements = [
   {
     id: 1,
-    title: "Singapore Management University",
-    location: "Singapore",
+    title: "Student",
+    location: "Singapore Management University",
     description: [
       "~ Sophmore at SMU School of Information Systems",
       "~ Majoring in Digitilisation and Cloud Solutioning (DCS)",
@@ -12,18 +12,18 @@ let timelineElements = [
   },
   {
     id: 2,
-    title: "Data Analyst Intern",
+    title: "Admin Intern",
     location: "AutomationSG, Singapore",
     description: [
       "~ Worked on automating data validation for client data",
       "~ Used Python to run automation scripts and extract, analyze data",
     ],
-    date: "May 2024 - Jul 2024",
+    date: "Dec 2023, May 2024 - Jul 2024",
     icon: "automationsg",
   },
   {
     id: 3,
-    title: "Compliance and Security Analyst",
+    title: "Compliance and Security Analyst Intern",
     location: "Accenture, Singapore",
     description: [
       "~ Worked as part of the Compliance team on a MINDEF project",

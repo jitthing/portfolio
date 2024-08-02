@@ -5,14 +5,14 @@ import { IoMdDocument } from "react-icons/io";
 export const TryAbout = () => {
   return (
     <div className="flex items-center justify-center h-[50vh]">
-      <div className="relative w-full group max-w-md min-w-0 mx-auto mb-6 break-words bg-rose-100 shadow-xl md:max-w-sm rounded-xl">
+      <div className="relative w-full group max-w-md min-w-0 mx-auto mb-6 break-words bg-sky-100 shadow-2xl md:max-w-sm rounded-2xl">
         <div className="pb-6 shadow-lg">
           <div className="flex flex-wrap justify-center">
             <div className="flex justify-center w-full">
               <img
                 src="../images/profile.jpg"
                 alt="Portrait About"
-                className="border-rose-100 rounded-full align-middle border-8 absolute -m-16 -ml-18 lg:-ml-16 max-w-[150px]"
+                className="border-sky-100 rounded-full align-middle border-8 absolute -m-16 -ml-18 lg:-ml-16 max-w-[150px]"
               />
             </div>
           </div>
