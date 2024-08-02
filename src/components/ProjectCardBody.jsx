@@ -11,7 +11,7 @@ export const ProjectInfoCards = () => {
     <div className="bg-white" id="projects">
       <ProjectImageCard
         id="#projects"
-        imgUrl={"../images/sunset.jpeg"}
+        imgUrl={"../images/sunrise.jpeg"}
         subHeading={"My Projects"}
         heading={"Some Things That I Have Done!"}
         height={"150"}
@@ -59,9 +59,11 @@ const ProjectContent = () => (
       Brief snapshot of the projects I have done so far!
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">test</p>
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+        These are my highlight projects
+      </p>
       <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        To view all my projects, click below to visit my Github page!
+        To view all my repositories, click below to visit my Github page!
       </p>
       <a href="https://github.com/jitthing" target="_blank" rel="noreferrer">
         <DottedButton name="Github" Icon={BsGithub} />

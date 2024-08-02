@@ -3,16 +3,22 @@ let projectElement = [
     id: 1,
     title: "FundTasy",
     description:
-      "A web application that makes the process of saving money more fun and engaging. Users can set goals and track their progress, while also being able to view their friends' goals and progress.",
+      "A gamified web application aimed at making money saving fun and interactive for users. Features include spending analysis and tracking, earning in-game currency, and a social aspect with allows users to make friends with anyone on the platform, sparking friendly competition to save money.",
     imgUrl: "fundtasy",
     projectLink: `https://github.com/jitthing/fundtasy`,
-    skills: ["React", "Node.js", "Express", "MongoDB", "Three.js"],
+    skills: [
+      "React.js",
+      "Express.js",
+      "MongoDB",
+      "Three.js",
+      "AWS EC2",
+      "Docker",
+    ],
   },
   {
     id: 2,
     title: "jitthing.com",
-    description:
-      "a personal portfolio website to better visualise my projects and experiences while making it fun and interactive for the user",
+    description: "A Personal Portfolio Website",
     imgUrl: "personal",
     projectLink: "https://github.com/jitthing/my-web",
     skills: ["React", "Node.js", "Framer Motion"],

@@ -66,11 +66,16 @@ const ExperienceImageCard = ({
 const ExperienceContent = () => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
     <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      A Timeline of my Work & Educational Experience
+      A Timeline of my Working Experience
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">Testing 2</p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">Testing 3</p>
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+        A small timeline component to show my experiences over the years.
+      </p>
+      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+        To view all my experiences and qualifications, click below to visit my
+        LinkedIn profile!
+      </p>
       <a
         href={`${process.env.PUBLIC_URL}/resume.pdf`}
         download="Jitt Hing Resume.pdf"

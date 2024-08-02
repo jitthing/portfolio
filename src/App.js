@@ -2,7 +2,7 @@ import MainSection from "./components/MainAbout";
 import { ExperienceInfoCards } from "./components/ExperienceCardBody";
 import { ProjectInfoCards } from "./components/ProjectCardBody";
 import { SkillInfoCards } from "./components/SkillsCardBody";
-import { TryAbout } from "./components/TryAbout";
+import { About } from "./components/About";
 // import { Projects } from "./components/Projects";
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <ExperienceInfoCards />
       <ProjectInfoCards />
       <SkillInfoCards />
-      <TryAbout />
+      <About />
       {/* Add a contact component with all the links (LinkedIn, Github, Email) */}
     </>
   );
