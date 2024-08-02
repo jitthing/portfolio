@@ -37,6 +37,18 @@ let timelineElements = [
     date: "Jan 2023 - July 2023",
     icon: "accenture",
   },
+  {
+    id: 4,
+    title: "Team Leader",
+    location: "Ministry of Health, Singapore",
+    description: [
+      "- Assisted MOH as part of the Covid Management Call Centre (CMCC) during the huge spikes of covid cases",
+      "- Worked as the team leader to delegate tasks, as well as answer to callers requests, such as conveyance to facilities or simple queries regarding Home Recovery Program (HRP) protocol.",
+      "- Doubled up as the point man for problematic or incompliant callers to act as a mediator and meet to their requests as best as we could.",
+    ],
+    date: "Feb 2022 - March 2022",
+    icon: "moh",
+  },
 ];
 
 export default timelineElements;

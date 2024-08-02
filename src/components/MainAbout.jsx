@@ -127,7 +127,7 @@ function MainSection() {
             width="200"
             height="200"
             className="rounded-full"
-            src="../images/profile.jpg"
+            src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
             alt="placeholder"
           />
         </motion.div>

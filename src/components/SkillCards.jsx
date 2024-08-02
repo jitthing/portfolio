@@ -86,7 +86,7 @@ const Card = ({ title, subtitle, Icon, skills }) => {
               return (
                 <ImageComponent
                   key={index}
-                  imgUrl={`../images/${skill
+                  imgUrl={`${process.env.PUBLIC_URL}/images/${skill
                     .split(" ")
                     .join("")
                     .toLowerCase()}.png`}

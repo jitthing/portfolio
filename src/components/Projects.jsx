@@ -36,7 +36,7 @@ export const Projects = () => {
           key={index}
           title={project.title}
           description={project.description}
-          image={`../../images/${project.imgUrl}.gif`}
+          image={`${process.env.PUBLIC_URL}/images/${project.imgUrl}.gif`}
           link={project.projectLink}
           skills={project.skills}
         />

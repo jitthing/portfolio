@@ -19,7 +19,7 @@ export const ExperienceInfoCards = () => {
       <ExperienceImageCard
         id="#experience"
         className="items-center justify-center"
-        imgUrl={"../images/jitt.jpeg"}
+        imgUrl={`${process.env.PUBLIC_URL}/images/jitt.jpeg`}
         subHeading={"Work Experience"}
         heading={"Where I Have Been!"}
         height={"150"}
@@ -77,12 +77,10 @@ const ExperienceContent = () => (
         LinkedIn profile!
       </p>
       <a
-        href={`${process.env.PUBLIC_URL}/resume.pdf`}
-        download="Jitt Hing Resume.pdf"
+        href="https://www.linkedin.com/in/jitt-hing-lim/"
+        target="_blank"
+        rel="noreferrer"
       >
-        {/* <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-          My Resume <FiArrowUpRight className="inline" />
-        </button> */}
         <DottedButton name="My LinkedIn" Icon={BsLinkedin} />
       </a>
     </div>

@@ -10,7 +10,7 @@ export const About = () => {
           <div className="flex flex-wrap justify-center">
             <div className="flex justify-center w-full">
               <img
-                src="../images/profile.jpg"
+                src={`${process.env.PUBLIC_URL}/images/about.jpeg`}
                 alt="Portrait About"
                 className="border-white rounded-full align-middle border-8 absolute -m-16 -ml-18 lg:-ml-16 max-w-[150px]"
               />
@@ -44,7 +44,10 @@ export const About = () => {
                 >
                   <BsLinkedin />
                 </a>
-                <a href="www.example.com" target="_blank" rel="noreferrer">
+                <a
+                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                  download="Jitt Hing Resume.pdf"
+                >
                   <IoMdDocument />
                 </a>
               </div>
