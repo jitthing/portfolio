@@ -16,7 +16,6 @@ const Main = styled(motion.main)`
 const NavigationButtonWrapper = styled(motion.div)`
   display: flex;
   margin: 0 auto;
-  width: 30%;
   justify-content: space-between;
   align-items: center;
 `;
