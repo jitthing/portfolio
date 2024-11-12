@@ -39,7 +39,7 @@ const ProjectImageCard = ({
         paddingRight: IMG_PADDING,
       }}
     >
-      <div className={`relative h-[250vh]`}>
+      <div className={`relative h-[350vh]`}>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy
           subHeading={subHeading}

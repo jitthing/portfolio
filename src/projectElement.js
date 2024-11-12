@@ -10,7 +10,7 @@ let projectElement = [
       "React.js",
       "Express.js",
       "MongoDB",
-      "Three.js",
+      "JWT Authorisation",
       "AWS EC2",
       "Docker",
     ],
@@ -21,7 +21,23 @@ let projectElement = [
     description: "A Personal Portfolio Website",
     imgUrl: "personal",
     projectLink: "https://github.com/jitthing/my-web",
-    skills: ["React", "Node.js", "Framer Motion"],
+    skills: ["React.js", "Node.js", "Framer Motion"],
+  },
+  {
+    id: "3",
+    title: "Spoonfeed",
+    description:
+      "A social media platform for foodies to share their recipes and cooking experiences. Spoonfeed allows users to create, plan and track their meals, as well as their nutritional intake.",
+    imgUrl: "spoonfeed",
+    projectLink: "https://github.com/jitthing/wad2_project",
+    skills: [
+      "Vue.js",
+      "Express.js",
+      "Firebase",
+      "Boostrap",
+      "Clerk",
+      "Chart.js",
+    ],
   },
 ];
 

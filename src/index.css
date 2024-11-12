@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (hover: none) {
+  .group:active .group-hover\:translate-y-\[0\%\] {
+    transform: translateY(0%);
+  }
+
+  .group:active .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}

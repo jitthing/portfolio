@@ -9,8 +9,11 @@ export const OverlayCopy = ({ subHeading, heading, Component }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [500, -500]);
-  // need to fix this opacity relative to the whole height
-  const opacity = useTransform(scrollYProgress, [0.1, 0.5, 0.9], [0, 1, 0]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.15, 0.85, 1],
+    [0, 1, 1, 0]
+  );
   //  TO REMEMBER: CHANGE THE INSET ON MOTION.DIV IN ACCORDANCE TO HEIGHT OF OVERLAY
   return (
     <motion.div
