@@ -40,7 +40,7 @@ const HoverDevCards = () => {
           title="Backend"
           subtitle="Hover to explore"
           Icon={AiOutlineApi}
-          skills={["Flask", "Express js"]}
+          skills={["Flask", "Express js", "Go"]}
         />
         <Card
           title="Database"
