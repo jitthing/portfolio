@@ -34,7 +34,7 @@ const HoverDevCards = () => {
           title="Frontend"
           subtitle="Hover to explore"
           Icon={VscFileCode}
-          skills={["React", "Vue", "Node js"]}
+          skills={["React", "Next.js", "Vue", "Node js"]}
         />
         <Card
           title="Backend"
@@ -46,13 +46,13 @@ const HoverDevCards = () => {
           title="Database"
           subtitle="Hover to explore"
           Icon={BsDatabase}
-          skills={["MySQL", "MongoDB", "Firebase"]}
+          skills={["MySQL", "MongoDB", "Firebase", "Supabase"]}
         />
         <Card
           title="Languages"
           subtitle="Hover to explore"
           Icon={IoLanguageOutline}
-          skills={["Python", "Javascript", "PHP"]}
+          skills={["Python", "Javascript", "Typescript", "PHP"]}
         />
       </div>
     </div>
