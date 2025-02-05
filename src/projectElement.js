@@ -43,7 +43,7 @@ let projectElement = [
     id: "4",
     title: "I understand it now",
     description:
-      "A dashboard curated to extract insights from given dataset of unstructured data. Utilised NLP techniques to extract keywords and topics from the dataset, and visualised the data using knowledge graphs, geomaps and a timeline.",
+      "•	Developed a data visualisation tool to glean insights from a given dataset, related to insider threat. Utilised Natural Language Processing and Named Entity Relationship libraries such as SpaCy and Relik to extract entity-relationships from unstructured text.",
     imgUrl: "i-understand-it-now.jpg",
     projectLink: "https://github.com/jitthing/BIA-Datathon-2025",
     skills: [
@@ -53,7 +53,9 @@ let projectElement = [
       "TailwindCSS",
       "Neo4j",
       "React Leaflet",
-      "Relik NLP Library",
+      "NLP",
+      "NER",
+      "Relik",
     ],
   },
 ];
