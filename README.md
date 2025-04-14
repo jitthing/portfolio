@@ -13,6 +13,7 @@ Inspired by Apple because I practically own the entire ecosystem...
 ## Tech Stack
 
 **Client:** React, TailwindCSS, Framer
+**Server:** Docker, Go
 
 
 ## Acknowledgements
@@ -23,11 +24,18 @@ Some of the components were inspired from youtube channels, credited below.
 
 ## Deployment
 
+### Frontend
 To deploy this project run and access it at localhost:3000
 
 ```bash
   npm install
   npm start
+```
+
+### Backend
+To start the backend server, run the docker container via root directory
+```bash
+docker compose up -d --build
 ```
 
 
