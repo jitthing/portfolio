@@ -3,6 +3,7 @@ import { ExperienceInfoCards } from "./components/ExperienceCardBody";
 import { ProjectInfoCards } from "./components/ProjectCardBody";
 import { SkillInfoCards } from "./components/SkillsCardBody";
 import { About } from "./components/About";
+import { ChatHistory} from "./components/ChatHistory";
 import { ReactLenis, useLenis } from "lenis/react";
 
 // import { Projects } from "./components/Projects";
@@ -17,6 +18,7 @@ function App() {
         <ProjectInfoCards />
         <SkillInfoCards />
         <About />
+        <ChatHistory />
       </ReactLenis>
     </>
   );
