@@ -13,6 +13,7 @@ Inspired by Apple because I practically own the entire ecosystem...
 ## Tech Stack
 
 **Client:** React, TailwindCSS, Framer
+
 **Server:** Docker, Go
 
 
