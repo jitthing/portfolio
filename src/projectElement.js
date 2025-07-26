@@ -58,6 +58,34 @@ let projectElement = [
       "Relik",
     ],
   },
+  {
+    id: 5,
+    title: "EventGo",
+    description:
+      "An end-to-end event & ticket management website centred around a microservice architecture.",
+    imgUrl: "eventgo.png",
+    projectLink: "https://github.com/jitthing/eventgo",
+    skills: [
+      "Microservices",
+      "Docker",
+      "API Gateway",
+      "Event Driven Communication",
+    ],
+  },
+  {
+    id: 6,
+    title: "ID Photo Generator",
+    description:
+      "Generate ID Photos compliant to dimension regulations in various countries. Surrounded around modelling real-world entities to encapsulated classes to capture strong OOP principles.",
+    imgUrl: "id-photo-generator.jpeg",
+    projectLink: "https://github.com/jitthing/IS442G1T3",
+    skills: [
+      "Java",
+      "Springboot",
+      "Object Oriented Programming",
+      "SOLID Principles",
+    ],
+  },
 ];
 
-export default projectElement;
+export default projectElement.reverse();

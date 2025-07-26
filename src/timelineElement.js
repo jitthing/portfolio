@@ -5,14 +5,14 @@ let timelineElements = [
     location: "Singapore Management University",
     description: [
       "- Sophmore at SMU School of Information Systems",
-      "- Majoring in Digitilisation and Cloud Solutioning (DCS)",
+      "- Majoring in Digitilisation and Cloud Solutioning (DCS) and Artificial Intelligence",
     ],
-    date: "August 2023 - present",
+    date: "August 2023 - Present",
     icon: "smu",
   },
   {
     id: 2,
-    title: "Admin Intern",
+    title: "Automation Engineer",
     location: "AutomationSG, Singapore",
     description: [
       "- Streamlined registration process for guests during events",
@@ -24,34 +24,42 @@ let timelineElements = [
   },
   {
     id: 3,
-    title: "Compliance and Security Analyst Intern",
-    location: "Accenture, Singapore",
+    title: "Software Developer",
+    location: "Accenture",
     description: [
-      "- Worked as part of the Compliance team on a MINDEF project",
-      "- Involed in the development of the OneNS web service as well as a mobile app",
-      "- Gained experience using AWS Console, more specifically EC2 Instances, Cloudwatch and Cloudtrail",
-      "- Auomated the log review process with AWS Boto3 by writing shell scripts to run on AWS CLI",
-      "- Performed weekly log review on internal processes with relevant stakeholders ",
+      "- Improved fault tolerance of cloud infrastructure with Amazon SNS and SQS, reducing service disruption by 20%.",
+      "- Optimised API performance by 10% through refactoring of React fetch logic into concise wrapper approach. ",
+      "- Automated batch job monitoring efforts through Power Automate workflows, reducing manual effort by 80%.",
+      "- Spearheaded Proof-of-Concept of AI feature enhancement as the main developer and solution architect.",
     ],
-
-    date: "Jan 2023 - July 2023",
+    date: "May 2025 - Jul 2025",
     icon: "accenture",
   },
   {
     id: 4,
-    title: "Team Leader",
-    location: "Ministry of Health, Singapore",
+    title: "Community Builder",
+    location: "Open Government Products",
     description: [
-      "- Assisted MOH as part of the Covid Management Call Centre (CMCC) during the huge spikes of covid cases",
-      "- Worked as the team leader to delegate tasks, as well as answer to callers requests, such as conveyance to facilities or simple queries regarding Home Recovery Program (HRP) protocol.",
-      "- Doubled up as the point man for problematic or incompliant callers to act as a mediator and meet to their requests as best as we could.",
+      "- BuildForGood Accelerator pipeline with SeniorSync, a care management system to improve daily workflows for Active Ageing Centres.",
+      "- Streamlined 4 fragmented workflows into 1 integrated system, reducing MTTR for seniors to receive help by 90%.",
+      "- Conducted numerous UAT sessions, improving user satisfaction by 50% compared to initial prototype.",
     ],
-    date: "Feb 2022 - March 2022",
-    icon: "moh",
+    date: "Jun 2025 - Present",
+    icon: "ogp",
+  },
+  {
+    id: 5,
+    title: "Software Engineer",
+    location: "Government Technology Agency",
+    description: [
+      "- Working on a cloud migration project to improve UX and performance of current HDB Sales Portal.",
+    ],
+    date: "Aug 2025 - Present",
+    icon: "govtech",
   },
 ];
 
-export default timelineElements;
+export default timelineElements.reverse();
 
 // {
 //   id: 4,
